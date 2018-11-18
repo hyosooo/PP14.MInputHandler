@@ -24,9 +24,6 @@
     <ClCompile Include="Enemy.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="GameObject.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="InputHandler.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>

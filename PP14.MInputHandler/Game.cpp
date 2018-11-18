@@ -1,12 +1,12 @@
-#include "Game.h"
-#include <SDL_image.h>
 #include <iostream>
+using namespace std;
+
 #include"TextureManager.h"
-#include "GameObject.h"
 #include "Inputhandler.h"
+#include "Game.h"
 #include "Player.h"
 #include "Enemy.h"
-using namespace std;
+
 
 Game* Game::s_pInstance = 0;
 
@@ -24,7 +24,7 @@ bool Game::init(const char* title, int xpos, int ypos,
 
 		m_bRunning = true;
 
-		// load 부분 대치   
+
 		if (!TheTextureManager::Instance()->load("assets/animate-alpha.png", "animate", m_pRenderer))
 		{
 			return false;
@@ -36,19 +36,19 @@ bool Game::init(const char* title, int xpos, int ypos,
 			"animate")));
 	}
 
-	else {
-		return false; // sdl could not initialize
-	}
+
 	return true;
 }
 void Game::render()
 {
 	SDL_RenderClear(m_pRenderer);
+
 	for (std::vector<GameObject*>::size_type i = 0;
 		i != m_gameObjects.size(); i++)
 	{
 		m_gameObjects[i]->draw();
 	}
+
 	SDL_RenderPresent(m_pRenderer);
 
 }
@@ -59,7 +59,6 @@ void Game::update()
 	{
 		m_gameObjects[i]->update();
 	}
-
 }
 
 void Game::clean()
@@ -76,6 +75,7 @@ void Game::handleEvents()
 	TheInputHandler::Instance()->update();
 
 	SDL_Event event;
+
 	if (SDL_PollEvent(&event))
 	{
 		switch (event.type)

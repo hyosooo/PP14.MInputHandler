@@ -1,9 +1,6 @@
 #pragma once
-#include "SDL.h"
 #include "GameObject.h"
-#include "SDLGameObject.h"
 #include <vector>
-#include <map>
 
 
 
@@ -11,6 +8,7 @@ class Game {
 private:
 
 	Game() {}
+
 	static Game* s_pInstance;
 
 	SDL_Window * m_pWindow;
@@ -47,8 +45,6 @@ public:
 	void clean();
 
 	void quit();
-
-
-
+	
 };	typedef Game TheGame;
 

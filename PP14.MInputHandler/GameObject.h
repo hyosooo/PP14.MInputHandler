@@ -1,7 +1,7 @@
 #pragma once
 #include "SDL.h"
-#include <map>
 #include "LoaderParams.h"
+
 class GameObject
 {
 public:
