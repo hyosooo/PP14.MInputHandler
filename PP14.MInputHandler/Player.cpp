@@ -1,28 +1,34 @@
 #include"Player.h"
 #include"Inputhandler.h"
+#include"Game.h"
 
-Player::Player(const LoaderParams* pParams) : SDLGameObject(pParams)
+Player::Player(const LoaderParams* pParams) :
+	SDLGameObject(pParams)
 {
 }
 
 void Player::draw()
 {
-	SDLGameObject::draw(); 
+	SDLGameObject::draw();
 }
-
 void Player::update()
 {
 	m_velocity.setX(0);
 	m_velocity.setY(0);
 	handleInput();
-	m_currentFrame = int(((SDL_GetTicks() / 100) % 6));
+	m_currentFrame = int(((SDL_GetTicks() / 100) % m_numFrames));
 	m_acceleration.setX(1);
 	SDLGameObject::update();
 
 }
 
+void Player::clean()
+{
+}
+
 void Player::handleInput()
 {
-	Vector2D* vec = TheInputHandler::Instance()->getMousePosition();
-	m_velocity = (*vec - m_position) / 100;
+	Vector2D* target = TheInputHandler::Instance()->getMousePosition();
+	m_velocity = *target - m_position;
+	m_velocity /= 50;
 }

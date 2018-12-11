@@ -5,7 +5,6 @@
 class Vector2D
 {
 public:
-
 	Vector2D(float x, float y) : m_x(x), m_y(y) {}
 	float getX() { return m_x; }
 	float getY() { return m_y; }
@@ -66,7 +65,6 @@ public:
 	void normalize()
 	{
 		float l = length();
-
 		if (l > 0)
 		{
 			(*this) *= 1 / l;
