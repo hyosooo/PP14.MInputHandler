@@ -1,14 +1,4 @@
 #include "Game.h"
-#include <SDL_image.h>
-#include <iostream>
-#include "GameObject.h"
-#include "MenuState.h"
-#include "PlayState.h"
-#include "Inputhandler.h"
-#include "GameStateMachine.h" 
-#include "TextureManager.h"
-#include "Player.h"
-#include "Enemy.h"
 
 using namespace std;
 
@@ -20,7 +10,6 @@ MenuState* MenuState::s_pInstance = 0;
 bool Game::init(const char* title, int xpos, int ypos,
 	int width, int height, bool fullscreen)
 {
-
 
 	if (SDL_Init(SDL_INIT_EVERYTHING) >= 0)
 	{
@@ -71,13 +60,6 @@ void Game::render()
 void Game::update()
 {
 	m_pGameStateMachine->update();
-
-	/*for (std::vector<GameObject*>::size_type i = 0;
-	i != m_gameObjects.size(); i++)
-	{
-	m_gameObjects[i]->update();
-	}*/
-
 }
 
 void Game::clean()
@@ -87,7 +69,3 @@ void Game::clean()
 	SDL_DestroyRenderer(m_pRenderer);
 	SDL_Quit();
 }
-
-//
-//void Game::quit()
-//{}

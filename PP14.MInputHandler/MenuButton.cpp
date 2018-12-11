@@ -1,11 +1,9 @@
 #include "MenuButton.h"
-#include "InputHandler.h"
-#include <iostream>
-using namespace std;
+
 
 void MenuButton::draw()
 {
-	SDLGameObject::draw(); // use the base class drawing
+	SDLGameObject::draw(); 
 }
 
 

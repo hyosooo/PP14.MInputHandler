@@ -1,8 +1,13 @@
 #pragma once
 #include "SDL.h"
-#include "GameStateMachine.h"
-
 #include <vector>
+#include "GameStateMachine.h"
+#include "MenuState.h"
+#include "PlayState.h"
+#include "Inputhandler.h"
+#include "TextureManager.h"
+#include "Player.h"
+#include "Enemy.h"
 
 class Game
 {
@@ -40,14 +45,7 @@ private:
 	bool m_bRunning;
 	int m_currentFrame;
 
-	//GameObject m_go;
-	//Player m_player;
-
 	std::vector<GameObject*> m_gameObjects;
-
-	// GameObject* m_go;
-	// GameObject* m_player;
-	// GameObject* m_enemy;
 
 	GameStateMachine* m_pGameStateMachine;
 

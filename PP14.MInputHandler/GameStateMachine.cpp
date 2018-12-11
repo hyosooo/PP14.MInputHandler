@@ -1,6 +1,4 @@
 #include "GameStateMachine.h"
-#include <iostream>
-using namespace std;
 
 void GameStateMachine::pushState(GameState *pState)
 {

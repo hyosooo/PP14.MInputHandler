@@ -1,5 +1,10 @@
 #pragma once
 #include "GameState.h"
+#include "MenuState.h"
+#include "MenuButton.h"
+#include "TextureManager.h"
+#include "InputHandler.h"
+#include "Game.h"
 
 class GameObject;
 

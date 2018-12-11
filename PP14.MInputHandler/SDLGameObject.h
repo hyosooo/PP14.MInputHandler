@@ -3,6 +3,7 @@
 #include <map>
 #include "GameObject.h"
 #include "Vector2D.h"
+#include "LoaderParams.h"
 
 class SDLGameObject : public GameObject
 {

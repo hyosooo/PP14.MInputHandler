@@ -1,9 +1,4 @@
 #include "PauseState.h"
-#include "MenuState.h"
-#include "MenuButton.h"
-#include "TextureManager.h"
-#include "InputHandler.h"
-#include "Game.h"
 #include <iostream>
 using namespace std;
 

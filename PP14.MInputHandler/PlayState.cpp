@@ -1,23 +1,10 @@
 #include "PlayState.h"
-#include "TextureManager.h"
-#include "InputHandler.h"
-#include "PauseState.h"
-#include "Game.h"
-#include "Player.h"
-#include "Enemy.h"
-#include "GameOverState.h"
-#include "SDLGameObject.h"
-#include <iostream>
-using namespace std;
+#include "GameObject.h"
 
 const std::string PlayState::s_playID = "PLAY";
 
-
-
 void PlayState::update()
 {
-	
-	
 	for (int i = 0; i < m_gameObjects.size(); i++)
 	{
 		m_gameObjects[i]->update();
@@ -30,7 +17,6 @@ void PlayState::update()
 	if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_ESCAPE))
 	{
 		TheGame::Instance()->getStateMachine()->changeState(PauseState::Instance());
-
 	}
 }
 

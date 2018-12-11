@@ -1,11 +1,4 @@
 #include"GameOverState.h"
-#include "Game.h"
-#include"TextureManager.h"
-#include"MenuState.h"
-#include "AnimatedGraphic.h"
-#include "PlayState.h"
-#include <iostream>
-#include "MenuButton.h"
 
 const std::string GameOverState::s_gameOverID = "GAMEOVER";
 GameOverState* GameOverState::s_pInstance = nullptr;

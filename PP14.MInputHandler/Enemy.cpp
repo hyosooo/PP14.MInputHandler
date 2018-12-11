@@ -1,7 +1,4 @@
 #include"Enemy.h"
-#include <SDL_image.h>
-#include <iostream>
-#include"AnimatedGraphic.h"
 
 Enemy::Enemy(const LoaderParams* pParams) : SDLGameObject(pParams)
 {

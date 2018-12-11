@@ -1,5 +1,9 @@
 #pragma once
 #include"GameState.h"
+#include "MenuButton.h"
+#include "TextureManager.h"
+#include "PlayState.h"
+#include "Game.h"
 
 
 class MenuState : public GameState

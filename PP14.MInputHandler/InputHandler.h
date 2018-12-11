@@ -1,6 +1,7 @@
 #pragma once
 #include "SDL.h"
 #include "Vector2D.h"
+#include "Game.h"
 #include <vector>
 #include <map>
 
@@ -29,8 +30,8 @@ public:
 	void update();
 	void clean();
 
-	void onKeyUp();
-	void onKeyDown();
+	//void onKeyUp();
+	//void onKeyDown();
 	void onMouseMove(SDL_Event& event);
 	void onMouseButtonDown(SDL_Event& event);
 	void onMouseButtonUp(SDL_Event& event);
@@ -49,7 +50,6 @@ private:
 	const Uint8* m_keystates;
 
 	std::vector<bool> m_mouseButtonStates;
-
 
 };
 typedef InputHandler TheInputHandler;

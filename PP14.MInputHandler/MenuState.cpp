@@ -1,8 +1,4 @@
 #include "MenuState.h"
-#include "MenuButton.h"
-#include "TextureManager.h"
-#include "PlayState.h"
-#include "Game.h"
 #include <iostream>
 using namespace std;
 

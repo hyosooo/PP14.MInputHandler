@@ -2,6 +2,9 @@
 #include <SDL_image.h>
 #include <iostream>
 #include"SDLGameObject.h"
+#include"Inputhandler.h"
+#include"Game.h"
+
 
 class Player : public SDLGameObject
 {

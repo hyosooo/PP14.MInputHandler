@@ -1,6 +1,13 @@
 #pragma once
 #include "GameState.h"
 #include "SDLGameObject.h"
+#include "TextureManager.h"
+#include "InputHandler.h"
+#include "PauseState.h"
+#include "Game.h"
+#include "Player.h"
+#include "Enemy.h"
+#include "GameOverState.h"
 
 
 class GameObject;
