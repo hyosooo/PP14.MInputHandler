@@ -9,6 +9,7 @@
 #include <iostream>
 
 class GameObject;
+
 class GameOverState : public GameState
 {
 	static void s_gameOverToMain();
@@ -16,8 +17,8 @@ class GameOverState : public GameState
 	static const std::string s_gameOverID;
 	std::vector<GameObject*> m_gameObjects;
 public:
-	GameOverState();
-	virtual void update();
+	//GameOverState();
+	 virtual void update();
 	virtual void render();
 	virtual bool onEnter();
 	virtual bool onExit();

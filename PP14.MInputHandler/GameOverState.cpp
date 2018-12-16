@@ -1,11 +1,13 @@
 #include"GameOverState.h"
+#include "GameStateMachine.h"
 
 const std::string GameOverState::s_gameOverID = "GAMEOVER";
 GameOverState* GameOverState::s_pInstance = nullptr;
 
-GameOverState::GameOverState()
-{
-}
+//
+//GameOverState::GameOverState()
+//{
+//}
 
 void GameOverState::s_gameOverToMain()
 {

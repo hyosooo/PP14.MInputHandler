@@ -6,7 +6,6 @@ void MenuButton::draw()
 	SDLGameObject::draw(); 
 }
 
-
 void MenuButton::clean()
 {
 	SDLGameObject::clean();
@@ -28,7 +27,7 @@ void MenuButton::update() {
 		if (TheInputHandler::Instance()->getMouseButtonState(LEFT) &&
 			m_bReleased) {
 			m_currentFrame = CLICKED;
-			m_callback(); // call our callback function
+			m_callback();
 			m_bReleased = false;
 		}
 		else if (!TheInputHandler::Instance()->getMouseButtonState(LEFT))
@@ -37,6 +36,7 @@ void MenuButton::update() {
 			m_currentFrame = MOUSE_OVER;
 		}
 	}
+
 	else
 	{
 		m_currentFrame = MOUSE_OUT;

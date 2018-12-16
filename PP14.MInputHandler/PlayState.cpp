@@ -26,8 +26,8 @@ void PlayState::render()
 	{
 		m_gameObjects[i]->draw();
 	}
-
 }
+
 bool PlayState::onEnter()
 {
 	if (!TheTextureManager::Instance()->load("assets/helicopter.png",
